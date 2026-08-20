@@ -1,0 +1,78 @@
+baseURL = "https://adityauj.github.io/"
+locale = "en-gb"
+title = "Aditya Ujeniya's blog"
+theme = "PaperMod"
+enableRobotsTXT = true
+enableEmoji = false
+
+[pagination]
+  pagerSize = 10
+
+[permalinks]
+  posts = "/posts/:slug/"
+
+# JSON is required by PaperMod's fuse.js search index.
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.goldmark.renderer]
+    # Needed for the raw <sup> fallback and for HTML comments to pass through.
+    unsafe = true
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = false
+    lineNos = false
+    tabWidth = 4
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+[params]
+  description = "A beginners perspective and experience into the world of HPC"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  ShowWordCount = false
+  hideFooter = false
+
+  [params.homeInfoParams]
+    Title = "Aditya Ujeniya's blog"
+    Content = "A beginner's perspective and experience into the world of HPC."
+
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    threshold = 0.4
+    minMatchCharLength = 3
+    keys = ["title", "permalink", "summary", "content"]
+
+[[menu.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "search"
+  name = "Search"
+  url = "/search/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 40
