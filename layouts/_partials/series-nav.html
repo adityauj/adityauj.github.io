@@ -1,0 +1,17 @@
+{{- with .Params.series -}}
+  {{- $name := index . 0 -}}
+  {{- $siblings := where (where site.RegularPages "Section" "posts") ".Params.series" "intersect" (slice $name) -}}
+  {{- $ordered := sort $siblings ".Params.series_order" -}}
+  {{- if gt (len $ordered) 1 -}}
+  <nav class="series-nav" aria-label="Series navigation">
+    <p class="series-nav__title">Part {{ $.Params.series_order }} of {{ len $ordered }} in <strong>{{ $name }}</strong></p>
+    <ol class="series-nav__list">
+      {{- range $ordered }}
+      <li{{ if eq .Permalink $.Permalink }} class="is-current"{{ end }}>
+        {{ if eq .Permalink $.Permalink }}{{ .Title }}{{ else }}<a href="{{ .Permalink }}">{{ .Title }}</a>{{ end }}
+      </li>
+      {{- end }}
+    </ol>
+  </nav>
+  {{- end -}}
+{{- end -}}

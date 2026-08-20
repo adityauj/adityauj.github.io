@@ -1,0 +1,4 @@
+{{- /* Overrides PaperMod's documented post-content hook. Renders the series
+       box after the post body. Uses the theme's own extension point rather
+       than a copied single.html, so nothing here is coupled to theme internals. */ -}}
+{{ partial "series-nav.html" . }}

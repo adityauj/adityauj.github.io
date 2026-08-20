@@ -1,0 +1,17 @@
+.series-nav {
+  margin: 1.5rem 0 2rem;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--code-bg);
+  font-size: 0.92rem;
+}
+.series-nav__title { margin: 0 0 0.4rem; }
+.series-nav__list { margin: 0; padding-left: 1.3rem; }
+.series-nav__list li.is-current { font-weight: 700; }
+
+/* Dense benchmark plots read better full-width than text-width. */
+.post-content .post-figure { margin-left: -1rem; margin-right: -1rem; }
+@media (max-width: 720px) {
+  .post-content .post-figure { margin-left: 0; margin-right: 0; }
+}
