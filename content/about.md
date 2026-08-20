@@ -13,3 +13,6 @@ These posts started on the FAU Erlangen-Nürnberg blog platform and moved here
 when that service was retired. The archive opens in February 2025 with a
 four-part series on CUDA-Aware-MPI, working from node topology up to optimizing
 strided GPU-to-GPU communication.
+
+For questions about the results or the benchmark code, mail me at
+[aditya.ujeniya@fau.de](mailto:aditya.ujeniya@fau.de).
